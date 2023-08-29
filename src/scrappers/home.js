@@ -1,13 +1,12 @@
 const axios = require("axios")
 const cheerio = require("cheerio")
-const { PopularToday, ProjectUpdate, LatestUpdate } = require("../util")
 
 const scrapePopular = async (req, res) => {
     const $ = cheerio.load(res.data)
     const datas = []
 
     $("div.mainholder > div#content")
-    .find("div.wrapper > div.hotslid > div.bixbox.hothome.full > div.listupd > div.bs ")
+    .find("div.wrapper > div.hotslid > div.bixbox.hothome.full > div.listupd > div.popconslide > div.bs ")
     .each((i, e) => {
         const dataObject = {}
 

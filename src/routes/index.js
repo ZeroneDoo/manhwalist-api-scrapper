@@ -13,13 +13,15 @@ const {
 
 const router = Router()
 
-router.get("/home", popularToday)
-router.get("/home/project-update", projectUpdate)
-router.get("/home/latest-update", latestUpdate)
-router.get("/manga/:endpoint", detailComic)
-router.get("/genres", genres)
-router.get("/genres/:endpoint", detailGenre)
-router.get("/chapter/:endpoint", chapters)
-router.get("/search", search)
+// manhwalist
+router.get("/manhwalist/home", popularToday)
+router.get("/manhwalist/home/project-update", projectUpdate)
+router.get("/manhwalist/home/latest-update", latestUpdate)
+router.get("/manhwalist/manga/:endpoint", detailComic)
+router.get("/manhwalist/genres", genres)
+router.get("/manhwalist/genres/:endpoint", detailGenre)
+router.get("/manhwalist/chapter/:endpoint", chapters)
+router.get("/manhwalist/search", search)
+
 
 module.exports = router
